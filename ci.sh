@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 
 docker build -t test-image .
 docker run --rm \
