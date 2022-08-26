@@ -4,10 +4,7 @@ RUN npm install --global pnpm
 
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
-RUN pnpm install
-
-COPY hello.js ./
+COPY package.json hello.js ./
 
 ENV GITHUB_EVENT_PATH="/home/runner/work/_temp/_github_workflow/event.json" \
     GITHUB_ENV="/home/runner/work/_temp/_runner_file_commands/set_env_5af7e6f6-8a08-40c8-818d-12d5e73ded01" \
